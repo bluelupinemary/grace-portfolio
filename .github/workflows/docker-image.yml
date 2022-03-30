@@ -15,4 +15,5 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --file Dockerfile --tag sam:latest
+        docker tag sam bluelupinemary/sam
         docker push ghcr.io/bluelupinemary/sam:latest
