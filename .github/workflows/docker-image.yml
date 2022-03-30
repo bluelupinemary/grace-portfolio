@@ -13,4 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag sam:latest
+      run: |
+        docker build . --file Dockerfile --tag sam:latest
+        docker push ghcr.io/bluelupinemary/sam:latest
